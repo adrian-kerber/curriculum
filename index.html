@@ -1,0 +1,193 @@
+<html>
+
+<head>
+  <title>Currículo | Adrian Mathias Kerber</title>
+  <meta charset="UTF-8" />
+  <!--[if IE]> <![endif]-->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>Adrian Kerber | Currículo</title>
+  <link rel="shortcut icon" href="" hreflang="en-us" />
+
+  <meta property="og:title" content="Currículo | Adrian Kerber" />
+  <meta property="og:description" content="Hey, my name is Adrian and this is my resume." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="Currículo | Adrian Kerber" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="672" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="description" content="Oi, meu nome é Adrian e este é meu currículo." />
+  <meta name="keywords" content="design, development, web, bchiang7, brittany, chiang, javascript, northeastern" />
+  <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" />
+
+  <meta itemprop="name" content="Currículo | Adrian Kerber" />
+  <meta itemprop="description" content="Oi, meu nome é Adrian e este é meu currículo." />
+  <meta itemprop="image" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:200,300,400,500,600,700" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div id="content"></div>
+  <script src="https://fb.me/react-0.14.6.js"></script>
+  <script src="https://fb.me/react-dom-0.14.6.js"></script>
+  <script src="https://unpkg.com/react@0.12.1/dist/JSXTransformer.js"></script>
+  <script type="text/jsx">
+
+      var DATA = {
+        name: "Oi, eu sou o Adrian",
+        subtext: "Situado em Rondonópolis, Brazil",
+        jobStatus: "Estudante de Informática em IFMT",
+        instaURL: 'https://www.instagram.com/kerbeber/',
+        githubURL: 'https://github.com/adrian-kerber',
+        linkedinURL: 'https://www.linkedin.com/in/adrianmathiaskerber',
+        resumeURL: './curriculum.pdf'
+      }
+
+      var App = React.createClass({
+        render: function() {
+          return(
+            <div className="app">
+              <Left
+                name={this.props.profileData.name}
+                subtext={this.props.profileData.subtext}
+                jobStatus={this.props.profileData.jobStatus}
+                instaURL={this.props.profileData.instaURL}
+                githubURL={this.props.profileData.githubURL}
+                linkedinURL={this.props.profileData.linkedinURL}
+              />
+              <Right
+                intro={this.props.profileData.intro}
+                resumeURL={this.props.profileData.resumeURL}
+              />
+            </div>
+          );
+        }
+      });
+
+      var Left = React.createClass({
+        render: function() {
+          return(
+            <div className="left">
+              <div className="bg-img"></div>
+              <div className="left-inner">
+                <div className="info">
+                  <h2 className="name">{this.props.name}</h2>
+                  <div className="subtext">{this.props.subtext}</div>
+                  <div className="jobStatus">{this.props.jobStatus}</div>
+                  <div className="social-links">
+
+                    <a href={this.props.instaURL} target="_blank"><i className="fa fa-instagram"></i></a>
+                    <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
+                    <a href={this.props.linkedinURL}  target="_blank"><i className="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        }
+      });
+
+      var Right = React.createClass({
+        render: function() {
+          return(
+            <div className="right">
+              <div className="right-inner">
+                <div className="introduction">
+                  <h4>Introdução</h4>
+                  <div className="content">
+                    <p className="intro-p">Estou em meu terceiro ano (de três) estudando informática no Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso.</p>
+                    <p className="intro-p">Apaixonado pelo mundo "Agro", sou um jovem que consegue misturar naturalmente a precisão dos computadores, o trabalho duro exigido no campo e a estratégia necessária para entrega de resultados diferenciados. Tenho experiência em desenvolver produtos para web, desde páginas simples até soluções complexas de software.</p>
+                    <span className="intro-p job-pls">Estou procurando participar do máximo de projetos antes da faculdade.</span>
+                  </div>
+                </div>
+                <div className="skills">
+                  <h4>Habilidades</h4>
+                  <div className="content">
+                    <div className="skill-category">
+                      <strong>Línguas: &nbsp;</strong>
+                      <span>Português e Inglês fluentes.</span>
+                    </div>
+                    <div className="skill-category">
+                      <strong>Linguagens de programação: &nbsp;</strong>
+                      <span>JavaScript (ES6), Python, Java e outras.</span>
+                    </div>
+                    <div className="skill-category">
+                      <strong>Libraries de programação; Frameworks: &nbsp;</strong>
+                      <span>Handlebars, Node, Express, React.</span>
+                    </div>
+                    <div className="skill-category">
+                      <strong>Ferramentas: &nbsp;</strong>
+                      <span>Git &amp; Github, Command Line, Adobe Photoshop, Adobe After Effects, Figma, Pacote Office.</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="education">
+                  <h4>Educação</h4>
+                  <div className="content">
+                    <div className="university"><a href="http://ifmt.edu.br/" target="_blank">Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso.</a></div>
+                    <div className="study-abroad"><strong>Inglês:</strong> "Positivo English Solution - Teens"</div>
+                    <div className="study-abroad"><strong>Extra:</strong> "Geração Web" curso feito no CEBRAC</div>
+                    <div className="study-abroad"><strong>Extra:</strong> "Complete Java 2020: From Zero to Professional + Projects!" curso ministrado por Cod3r Cursos</div>
+                    <div className="grad-date">Expected Graduation: December 2021</div>
+                  </div>
+                </div>
+                <div className="experience">
+                  <h4>Experiência</h4>
+                  <div className="content">
+                    <div className="exp-item">
+                      <div className="job">
+                        <a className="company" href="https://adm.com/" target="_blank">Archer Daniels Midland Company.</a>
+                        <div className="duration">February 2019 &mdash; March 2019</div>
+                      </div>
+                      <div className="title">Apprentice</div>
+                      <ul className="description">
+                        <li>Trabalhei como Aprendiz no setor de logística, controlando o fluxo de volume para o destino/fábrica.</li>
+                        <li>Desenvolvi habilidades chaves no setor administrativo, adquirindo experiência corporativa </li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+                <div className="projects">
+                  <h4>Projetos</h4>
+                  <div className="content">
+                    <div className="project-item">
+                      <a className="project-title" href="https://github.com/adrian-kerber/happy" target="_blank">Happy</a>
+                      <p className="project-desc">Happy is a project thHappy é um projeto que visa facilitar visitação à orfanatos perto de você. </p>
+                    </div>
+
+                    <div className="project-item">
+                      <a className="project-title" href="https://github.com/adrian-kerber/ecoleta" target="_blank">Ecoleta</a>
+                      <p className="project-desc">Uma aplicação que ajuda pessoas a encontrarem pontos de coleta para reciclagem</p>
+                    </div>
+                    <div className="project-item">
+                      <a className="project-title" href="https://github.com/adrian-kerber/proffy" target="_blank">Proffy</a>
+                      <p className="project-desc">Uma Plataforma que pode conectar aqueles que querem aprender à aqueles que querem ensinar</p>
+                    </div>
+                  </div>
+                </div>
+                <a className="resume" href={this.props.resumeURL} target="_blank"><div className="resume-link">Baixe um PDF do meu currículo.</div></a>
+              </div>
+            </div>
+          );
+        }
+      });
+
+      ReactDOM.render(
+        <App profileData={DATA}/>,
+        document.getElementById('content')
+      );
+    </script>
+</body>
+
+</html>
